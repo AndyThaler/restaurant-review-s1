@@ -18,12 +18,15 @@
   </header>
 
   <main id="maincontent">
+
+    <a href="#content" class="a11y-link">Skip to content</a>
+
     <section id="map-container">
       <div role="application" id="map"></div>
     </section>
     <section>
       <div class="filter-options">
-        <h2 role="heading">Filter Results</h2>
+        <h2 id="content" tabindex="0">Filter Results</h2>
         <select role="listitem" id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
           <option value="all">All Neighborhoods</option>
         </select>
@@ -39,19 +42,7 @@
   <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
 
 <!-- Service Worker Registration-->
-  <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    navigator.serviceWorker.register('sw.js')
-    .then(function(registration) {
-      console.log("Service Worker successfully registered!");
-    })
-    .catch(function(e) {
-      console.log("Registration failed" + e);
-    })
-
-  });
-
-  </script>
+  <script type="application/javascript" src="swreg.js"></script>
   <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places&callback=initMap"></script> -->
 
 
