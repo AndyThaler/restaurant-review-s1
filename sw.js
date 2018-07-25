@@ -1,6 +1,7 @@
 var staticCacheName = "restaurant-static-v1";
 var urls = [
   "./",
+  "swreg.js",
   "index.html",
   "restaurant.html",
   "css/styles.css",
