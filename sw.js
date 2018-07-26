@@ -1,6 +1,6 @@
 var staticCacheName = "restaurant-static-v1";
 var urls = [
-  "./",
+  "/",
   "swreg.js",
   "index.html",
   "restaurant.html",
@@ -25,7 +25,7 @@ self.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open(staticCacheName)
           .then(function (cache) {
-            cache.addAll(urls);
+            return cache.addAll(urls);
             })
           .then(self.skipWaiting())
           );
